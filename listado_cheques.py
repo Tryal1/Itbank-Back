@@ -76,8 +76,8 @@ def DevolverCheques(filtered_rows, salida: str, dni: str):
     if salida == "PANTALLA":
 
         for filtered_row in filtered_rows:
-
-            print(filtered_row)
+            print(("{:<17}"*11).format("NroCheque","CodigoBanco","CodigoScurusal","NumeroCuentaOrigen","NumeroCuentaDestino", "Valor","FechaOrigen","FechaPago","DNI","Tipo","Estado"))
+            print(("{:<17}"*11).format(filtered_row["NroCheque"], filtered_row["CodigoBanco"],filtered_row["CodigoScurusal"],filtered_row["NumeroCuentaOrigen"],filtered_row["NumeroCuentaDestino"],filtered_row["Valor"],filtered_row["FechaOrigen"],filtered_row["FechaPago"],filtered_row["DNI"],filtered_row["Tipo"],filtered_row["Estado"]))
 
     elif salida == "CSV":
         
@@ -137,3 +137,4 @@ if __name__ == "__main__":
     else:
 
         print("Error: El número de argumentos es incorrecto")
+        StartLog(nombre_log = "log.txt", nombre_archivo = "null", dni = "null", salida ="null", cantidad_argumentos = len(sys.argv), status = "FAIL")
