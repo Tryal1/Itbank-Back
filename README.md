@@ -49,14 +49,15 @@ Main()
 
 ```
 
-## Contributing
-Proyecto cerrado. Parte de Programa Fullstack Development ITBA
-
 ## log.py
 ```python
 # registra en un archivo txt todas las veces que se ejecuta el programa, y el status de ejecución
 StartLog()
 ```
+
+## Contributing
+Proyecto cerrado. Parte de Programa Fullstack Development ITBA
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
