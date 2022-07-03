@@ -22,6 +22,8 @@ import copy
 import sys
 # para registrar las veces que se ejecuta el programa en un txt
 from log import StartLog
+# para crear registros de cheques
+from crear_cheques import CrearCheques
 ```
 
 ## listado_cheques.py
@@ -38,6 +40,9 @@ LevantarErrores()
 
 # Devuelve la lista de cheques que cumpla con los requisitos, ya sea por consola o exportando a un archivo csv
 DevolverCheques()
+
+# Crea o modifica un archivo csv, en donde le pasas valores por consola y los guarda
+CrearCheques()
 
 # Toma argumentos por consola, y ejecuta las funciones LeerArchivo(), FiltrarArchivo(), LevantarErrores() y DevolverCheques()
 Main()
