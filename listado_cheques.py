@@ -113,7 +113,7 @@ def Main(nombre_archivo: str, dni: str, salida: str, tipo_cheque: str, estado_ch
     DevolverCheques(filtered_rows, salida = salida, dni = dni) if status else None
 
     # Registro de fin y status del programa
-    StartLog("log.txt", nombre_archivo, dni, salida, "SUCCESS", len(sys.argv), status = "SUCCESS" if status else "FAIL")
+    StartLog(nombre_log = "log.txt", nombre_archivo = nombre_archivo, dni = dni, salida = salida, cantidad_argumentos = len(sys.argv), status = "SUCCESS" if status else "FAIL")
 
 
 # para probar el código
