@@ -12,7 +12,7 @@ def StartLog(nombre_log, nombre_archivo, dni, salida, cantidad_argumentos, statu
 	hora_actual = str(datetime.datetime.now())
 
 	archivo_log.write(f"{hora_actual}: Inicio de registro de actividad\n")
-	archivo_log.write(f"{hora_actual} nombre del archivo: {nombre_archivo}  dni: {dni} - salida: {salida} - status: {status} - cantidad de argumentos: {cantidad_argumentos} status: {status} \n")
+	archivo_log.write(f"{hora_actual} nombre del archivo: {nombre_archivo}  dni: {dni} - salida: {salida} - cantidad de argumentos: {cantidad_argumentos} status: {status} \n")
 	archivo_log.write(f"{hora_actual}: Fin de registro de actividad\n")
 
 	archivo_log.close()

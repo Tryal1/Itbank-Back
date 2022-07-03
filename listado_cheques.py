@@ -107,14 +107,13 @@ def Main(nombre_archivo: str, dni: str, salida: str, tipo_cheque: str, estado_ch
     filtered_rows = FiltrarArchivo(rows, dni = dni, tipo_cheque = tipo_cheque, estado_cheque = estado_cheque, rango_fecha_inicio = rango_fecha_inicio, rango_fecha_fin = rango_fecha_fin)
 
     # Levantar errores
-    status = LevantarErrores(rows, filtered_rows)
+    status = LevantarErrores(filtered_rows)
 
     # Devolver cheques
     DevolverCheques(filtered_rows, salida = salida, dni = dni) if status else None
 
     # Registro de fin y status del programa
     StartLog(nombre_log = "log.txt", nombre_archivo = nombre_archivo, dni = dni, salida = salida, cantidad_argumentos = len(sys.argv), status = "SUCCESS" if status else "FAIL")
-
 
 # para probar el código
 # python listado_cheques.py test.csv 11580999 PANTALLA EMITIDO APROBADO 1620183365 1620183375 -> Utilizando filtros opcionales de estado y rango de fecha (caso exitoso)
